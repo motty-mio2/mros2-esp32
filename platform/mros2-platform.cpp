@@ -28,9 +28,10 @@
 /*
  *  Setup network I/F
  */
-extern "C" esp_err_t mros2_platform_network_connect(void)
+extern "C" esp_err_t mros2_platform_network_connect(char *wifi_ssid,
+                                                    char *wifi_pass) 
 {
-  init_wifi();
+  init_wifi(wifi_ssid, wifi_pass);
   osKernelStart();
 
   /* get mros2 IP address and set it to RTPS */

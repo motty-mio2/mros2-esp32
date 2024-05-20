@@ -1,14 +1,14 @@
 /*
  * NOTE:
- *   This file is copied from esp-idf examples as the below, and modified for usage of mros2-esp32.
+ *   This file is copied from esp-idf examples as the below, and modified for
+ * usage of mros2-esp32.
  *   https://github.com/espressif/esp-idf/blob/master/examples/wifi/getting_started/station/main/station_example_main.c
- *   Therefore, mROS-base org inherits the Public Domain (or CC0) LICENCE for this file from the original file.
+ *   Therefore, mROS-base org inherits the Public Domain (or CC0) LICENCE for
+ * this file from the original file.
  */
 
 #include "esp_wifi_types.h"
 
-#define ESP_WIFI_SSID "SSID"
-#define ESP_WIFI_PASS "PASS"
 #define ESP_MAXIMUM_RETRY 3
 #define ESP_WIFI_SCAN_AUTH_MODE_THRESHOLD WIFI_AUTH_WPA2_PSK
 
@@ -29,7 +29,7 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-extern void init_wifi(void);
+extern void init_wifi(char *wifi_ssid, char *wifi_pass);
 uint32_t get_mros2_ip_addr(void);
 #ifdef __cplusplus
 }

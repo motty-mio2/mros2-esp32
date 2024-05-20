@@ -13,7 +13,7 @@
 
 
 /* NOTE: this function has not been implemented and used yet */
-extern "C" esp_err_t mros2_platform_network_connect(void);
-
+extern "C" esp_err_t mros2_platform_network_connect(char *wifi_ssid,
+                                                    char *wifi_pass);
 
 #endif /* MROS2_PLATFORM_H */
