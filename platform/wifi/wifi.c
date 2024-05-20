@@ -133,7 +133,7 @@ void init_wifi(char *wifi_ssid, char *wifi_pass) {
   ESP_ERROR_CHECK(ret);
 
   ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
-  wifi_init_sta(char *wifi_ssid, char *wifi_pass);
+  wifi_init_sta(*wifi_ssid, *wifi_pass);
 }
 
 uint32_t get_mros2_ip_addr(void) { return mros2_ip_addr; }
